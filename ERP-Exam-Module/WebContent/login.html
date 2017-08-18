@@ -1,0 +1,47 @@
+<!Doctype html>
+<html ng-app="">
+    <head >
+    
+        <script type="text/javascript" src=js/angular.js></script>
+        <link rel="stylesheet" href="css/logstyle.css">
+    </head>
+    <body>
+    
+    <header ng-include src="common/header.html"></header>
+    
+    		<div style="width:60px; margin:0 auto;">
+             <form action="login.java" method="post" >
+             <h1>Centurion University</h1>
+             
+              <div class="imgcontainer">
+                <img src="img\find_user.png" alt="Avatar" class="avatar">
+              </div>
+                <br>
+              <div class="container">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="userName" required ng-model="uName">
+                  <br>
+                   
+                  <br>
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required ng-model="pass"/><br>
+                  {{pass}}
+                  <div ng-hide="pass"></div>
+                  <br>
+                <button type="submit">Login</button>
+                  <br>
+                  <br>
+                <input type="checkbox" checked="checked" ng-model="checked"> Remember me
+              	<div ng-hide="checked"></div>
+              </div>
+                 <br>
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button><br>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+
+        </form>  
+        </div>
+        <footer ng-include src="'common/footer.html'" ></footer>
+    </body>
+</html>
